@@ -25,10 +25,6 @@ def extract_news(url):
     content = response.content
 
     soup = BeautifulSoup(content, 'html.parser')
-    links = soup.find_all('a')
-    # for link in links:
-    #    links = ''
-    #    links += link.text
        
     for i, tag in enumerate(soup.find_all('a')):
         soup.find_all('//body/main//div//a', attrs={'class':'title'})
